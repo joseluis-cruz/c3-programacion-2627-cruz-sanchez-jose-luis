@@ -15,7 +15,8 @@ int suma = Sumar(a, b);
 // Escribo el resultado
 // El "$" antes del literal permite que {suma}...
 // ...se reemplace por su valor real cuando se va a imprimir
-Console.WriteLine($"Resultado: {suma}");
+
+// Console.WriteLine($"Resultado: {suma}"); Comentada temporalmente
 
 /*
   Este es un ejemplo de función que toma dos valores enteros
