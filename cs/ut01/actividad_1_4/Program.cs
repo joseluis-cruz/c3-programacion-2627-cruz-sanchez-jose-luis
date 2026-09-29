@@ -2,7 +2,6 @@
 Autor: José Luis Cruz Sánchez
 Correo: joseluis.cruz@murciaeduca.es
 Proyecto: HolaCS_10_4 para actividad 1.4
-
 */
 
 // declaración de variables que son los valores de entrada
