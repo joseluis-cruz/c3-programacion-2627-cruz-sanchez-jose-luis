@@ -23,5 +23,12 @@ class CuentaBancaria
     {
         //AYUDA, cuando lo tengas todo tendrás que poner esto: $"{titular}, tienes {saldo} €"
         Console.WriteLine("Método MostrarSaldo() no implementado aún!"); 
-    }    
+    }   
+    //Ingresar(apdo. c)
+    public void Ingresar(double cantidad)
+    {
+        saldo += cantidad;
+    }
+
+
 }
