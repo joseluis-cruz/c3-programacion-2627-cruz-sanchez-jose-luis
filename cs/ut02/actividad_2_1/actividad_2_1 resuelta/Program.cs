@@ -17,6 +17,8 @@ class Program
     Console.ReadLine(); 
 
     cronometro.Stop(); //método Stop de la clase Stopwatch
+    // Elapsed es un atributo, porque carece de paréntesis
+    TimeSpan ts = cronometro.Elapsed;
 
     Console.WriteLine($"Has tardado {cronometro.ElapsedMilliseconds} ms");
   }
