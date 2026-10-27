@@ -1,4 +1,7 @@
 ﻿namespace actividad_2_1;
+/* La línea using sirve para incluir esa librería en este programa y que,
+   si aparece alguna referencia a una clase de esta librería, el programa
+   la reconozca y no de error */
 using System.Diagnostics;
 
 class Program
