@@ -22,7 +22,7 @@ class CuentaBancaria
     public void MostrarSaldo()
     {
         //AYUDA, cuando lo tengas todo tendrás que poner esto: $"{titular}, tienes {saldo} €"
-        Console.WriteLine("Método MostrarSaldo() no implementado aún!"); 
+        Console.WriteLine($"{titular}, tienes {saldo} €"); 
     }   
     //Ingresar(apdo. c)
     public void Ingresar(double cantidad)
