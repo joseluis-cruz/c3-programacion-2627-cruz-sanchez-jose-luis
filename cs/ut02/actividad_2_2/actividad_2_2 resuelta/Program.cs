@@ -29,6 +29,11 @@ class CuentaBancaria
     {
         saldo += cantidad;
     }
+    //Retirar (apdo. d)
+    public void Retirar(double cantidad)
+    {
+        saldo -= cantidad;
+    }
 
 
 }
