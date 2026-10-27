@@ -6,6 +6,7 @@ class Program
   static void Main(string[] args)
   {
     /* Aquí aparece la clase "Stopwatch", de la cual se
+
     está declarando un objeto "cronometro" y, al mismo tiempo,
     se le está asignando un objeto de esa misma clase para
     poder utilizarlo*/
@@ -19,7 +20,9 @@ class Program
     cronometro.Stop(); //método Stop de la clase Stopwatch
     // Elapsed es un atributo, porque carece de paréntesis
     TimeSpan ts = cronometro.Elapsed;
+    int segundos = ts.Seconds;
+    int milisec = ts.Milliseconds;    
 
-    Console.WriteLine($"Has tardado {cronometro.ElapsedMilliseconds} ms");
+    Console.WriteLine($"Has tardado {segundos} s. y {milisec} ms.");
   }
 }
