@@ -17,10 +17,10 @@ class Program
 
 class CuentaBancaria
 {
+    public string titular;
+    public double saldo;
     public void MostrarSaldo()
     {
-        public string titular;
-        public double saldo;
         //AYUDA, cuando lo tengas todo tendrás que poner esto: $"{titular}, tienes {saldo} €"
         Console.WriteLine("Método MostrarSaldo() no implementado aún!"); 
     }    
