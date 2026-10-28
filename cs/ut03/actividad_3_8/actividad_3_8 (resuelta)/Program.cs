@@ -24,6 +24,10 @@ class Program
             while (test_divisor>=NUMERO_MIN)
             {
                 //Compruebo si "test_divisor" divide o no a "numero"
+                if (numero % test_divisor == 0) // si el resto de la división es cero, es divisble
+                {
+                    Console.WriteLine($"El número {test_divisor} es divisor de {numero}");
+                }
                 //Finalizo restando 1 a test_divisor
                 test_divisor--;
             }            
