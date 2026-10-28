@@ -21,9 +21,9 @@ class Program
         }
         else // ahora sí, me he garantizado que el número está entre 2 y 10000
         {
-            while (test_divisor>=2)
+            while (test_divisor>=NUMERO_MIN)
             {
-                //Aquí haré las comprobaciones de si numero es divisible por test_divisor
+                //Compruebo si "test_divisor" divide o no a "numero"
                 //Finalizo restando 1 a test_divisor
                 test_divisor--;
             }            
