@@ -21,6 +21,12 @@ class Program
         }
         else // ahora sí, me he garantizado que el número está entre 2 y 10000
         {
+            while (test_divisor>=2)
+            {
+                //Aquí haré las comprobaciones de si numero es divisible por test_divisor
+                //Finalizo restando 1 a test_divisor
+                test_divisor--;
+            }            
         }
     }
 }
