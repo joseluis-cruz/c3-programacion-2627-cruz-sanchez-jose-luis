@@ -11,7 +11,7 @@ class Program
         //PROFESOR::completa el programa para que cumpla con las especificaciones del enunciado
         for (int i=1; i<=repeticiones; i++)
         {
-            Console.WriteLine(palabra);
+            Console.Write(palabra+",");
         }
 
     }
