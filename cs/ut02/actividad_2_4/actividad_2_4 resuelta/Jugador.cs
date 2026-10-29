@@ -20,5 +20,10 @@ class Jugador
         }
         return nombre_corto;
     }
+
+    public string GetNombreEquipo()
+    {
+        return equipo.nombre;
+    }
     
 }
