@@ -9,6 +9,11 @@ class Program
         //::PROFESOR:: Agregar un ciclo for para mostrar la tabla de multiplicar del número introducido
         //::PROFESOR:: El resultado será, para cada línea "{numero} x {i} = {numero * i}"
         //::PROFESOR:: Ejemplo: "5 x 1 = 5" ; "5 x 2 = 10" ; "5 x 3 = 15" ; ... ; "5 x 10 = 50")
+        for (int i=1;i<=10;i++)
+        {
+            int resultado = numero*i;
+            Console.WriteLine($"{numero} x {i} = {resultado}");
+        }
 
     }
 }
