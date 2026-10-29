@@ -11,7 +11,15 @@ class Program
         {
             Console.WriteLine(palabra);
             // quito el último carácter copiando desde el primer (0) hasta su longitud menos uno
-            palabra = palabra.Substring(0, palabra.Length - 1);            
+            if (palabra.Length>1)
+            {
+                palabra = palabra.Substring(1, palabra.Length - 2);            
+            }
+            else
+            {
+                palabra = "";
+            }
+
         }
         while (palabra != "");
     }
