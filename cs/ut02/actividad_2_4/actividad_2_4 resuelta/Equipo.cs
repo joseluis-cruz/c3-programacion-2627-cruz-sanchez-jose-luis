@@ -4,8 +4,9 @@ class Equipo
 {
     public string nombre;
     public int jugadores;
-    public void fichar(Jugador jugador)
+    public void Fichar(Jugador jugador)
     {
-        
+        jugador.equipo = this;
+        jugadores++;
     }
 }
