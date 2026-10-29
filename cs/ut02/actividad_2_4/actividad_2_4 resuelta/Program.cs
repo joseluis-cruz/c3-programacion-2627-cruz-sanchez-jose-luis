@@ -11,7 +11,7 @@ class Program
         j1.nombre = "Marcelo";
         j1.dorsal = 12;
         j1.apodo = "";
-        j1.equipo = e1;
+        //j1.equipo = e1;
         Console.WriteLine($"{j1.GetNombreCorto()} juega en el equipo {j1.GetNombreEquipo()}");
     }
 }
