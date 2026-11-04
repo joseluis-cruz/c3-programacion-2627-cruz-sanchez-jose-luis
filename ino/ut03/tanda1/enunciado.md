@@ -8,6 +8,8 @@ El profesor comparte el circuito y el programa inicial en Wokwi:
 
 **[Abrir el proyecto de la tanda 1](https://wokwi.com/projects/479588049590466561)**
 
+Inicia sesión en Wokwi **con tu cuenta de GitHub** y guarda una copia del proyecto en tu cuenta de Wokwi. No utilices la cuenta `@alu.murciaeduca.es`, porque su administrador no permite la autenticación en esta plataforma.
+
 El circuito contiene tres LED y un pulsador. Se utilizan las siguientes definiciones:
 
 | Definición | Pin | Componente |

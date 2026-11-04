@@ -38,7 +38,7 @@ En Wokwi podemos:
 ## 4. Acceso a la plataforma
 
 1. Entra en [https://wokwi.com/](https://wokwi.com/).
-2. Regístrate o inicia sesión utilizando tu **cuenta educativa `@alu.murciaeduca.es`**. Si aparece la opción de acceso mediante Google, utiliza la cuenta educativa correspondiente.
+2. Regístrate o inicia sesión utilizando tu **cuenta de GitHub**. No utilices la cuenta educativa `@alu.murciaeduca.es`, ya que su administrador no permite esta autenticación.
 3. Abre el enlace del proyecto que facilite el profesor.
 4. Examina el circuito y su código. Inicia la simulación y comprueba qué ocurre al interactuar con los componentes.
 5. Realiza los cambios solicitados en cada ejercicio y comprueba su funcionamiento antes de guardar el código.
