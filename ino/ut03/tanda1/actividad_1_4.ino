@@ -11,6 +11,8 @@
 #define LEDV 2 // led verde
 #define BTN1 7 // botón de pulsación
 
+#define TIEMPO_CONMUTACION 250 // Actividad 1.4 - Definimos el tiempo de conmutación entre leds en milisegundos
+
 void setup() //Método que se ejecuta al inicio, sólo una vez
 {
   //Establecer modos de cada puerto (entrada o salida)
@@ -38,13 +40,13 @@ void loop() // Método que se ejecuta en bucle, todo el tiempo que el dispositiv
     for (int i=0;i<4;i++) // Actividad 1.4 - Cambio el 5 por 4 (son las repeticiones que pide)
     {
       digitalWrite(LEDR, HIGH);      
-      delay(250); // Actividad 1.4 - Este es el tiempo de espera entre cada paso del ciclo
+      delay(TIEMPO_CONMUTACION); // Actividad 1.4 - Este es el tiempo de espera entre cada paso del ciclo
       digitalWrite(LEDR, LOW); // Actividad 1.4 - Encendemos el siguiente y apagamos el anterior
       digitalWrite(LEDA, HIGH);      
-      delay(250); 
+      delay(TIEMPO_CONMUTACION); 
       digitalWrite(LEDA, LOW); 
       digitalWrite(LEDV, HIGH);      
-      delay(250); 
+      delay(TIEMPO_CONMUTACION); 
       digitalWrite(LEDV, LOW); 
     }
   }

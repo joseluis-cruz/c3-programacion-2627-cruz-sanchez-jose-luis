@@ -11,7 +11,7 @@
 #define LEDV 2 // led verde
 #define BTN1 7 // botón de pulsación
 
-#define TIEMPO_ESPERA_AMARILLO 500
+#define TIEMPO_ESPERA_AMARILLO 1000
 #define TIEMPO_ESPERA_ROJO 3000
 
 void setup() //Método que se ejecuta al inicio, sólo una vez
