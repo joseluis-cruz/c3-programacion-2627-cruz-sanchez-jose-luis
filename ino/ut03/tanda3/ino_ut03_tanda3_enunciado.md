@@ -38,56 +38,42 @@ Amplía el programa para que también funcione el intermitente derecho.
 
 **TIP:** Puedes utilizar una estructura `if` para decidir qué LED debe encenderse y apagarse. No es necesario duplicar la constante que establece el tiempo de parpadeo.
 
-### Actividad 3.3. Selección del intermitente mediante pulsadores
+### Actividad 3.3. Selección del estado mediante pulsadores
 
-Modifica el programa para que los intermitentes se controlen mediante los pulsadores del circuito.
+Modifica el programa para que los intermitentes se controlen mediante los pulsadores del circuito, **recordando en qué estado se encuentra el sistema**.
 
 El funcionamiento será el siguiente:
 
 1. Al pulsar el botón izquierdo, se activará el intermitente izquierdo.
 2. Al pulsar el botón derecho, se activará el intermitente derecho.
-3. Si no se pulsa ningún botón, los dos intermitentes permanecerán apagados.
-4. Si se activa uno de los intermitentes, deberá parpadear indefinidamente hasta que se seleccione otro modo de funcionamiento.
-5. Si se pulsa el botón contrario, el intermitente que estaba funcionando se apagará y comenzará a funcionar el otro.
-6. Utiliza una variable para almacenar el modo de funcionamiento actual:
-   - `0`: ningún intermitente activado.
-   - `1`: intermitente izquierdo.
-   - `2`: intermitente derecho.
-7. Mantén la velocidad de parpadeo establecida mediante `BLINK_MS`.
+3. **Si se vuelve a pulsar el botón del intermitente que está funcionando, este se desactivará y dejará de parpadear.**
+4. Una vez activado, un intermitente continuará parpadeando aunque se suelte el botón.
+5. Si se pulsa el botón contrario, el intermitente activo se apagará y comenzará a parpadear el otro.
+6. Si no hay ningún intermitente activado, ambos LED permanecerán apagados.
+7. Declara una **variable global** de tipo `byte` llamada `estado`, que recuerde el estado actual del sistema entre sucesivas ejecuciones de `loop()`.
+8. Define al principio del código las constantes que identifiquen cada estado:
+   - `ESTADO_TODO_APAGADO` (`0`): ambos intermitentes apagados.
+   - `ESTADO_PARPADEA_IZQUIERDA` (`1`): intermitente izquierdo activado.
+   - `ESTADO_PARPADEA_DERECHA` (`2`): intermitente derecho activado.
+9. Inicializa `estado` en `setup()` con el valor `ESTADO_TODO_APAGADO` y mantén la velocidad de parpadeo establecida mediante `BLINK_MS`.
 
-**TIP:** Puedes utilizar una variable de tipo `byte` y una estructura `switch` para gestionar los tres modos de funcionamiento. Recuerda que debes distinguir entre la lectura de los pulsadores y el control del parpadeo.
+**TIP:** Organiza el programa en dos fases: primero comprueba las pulsaciones para actualizar `estado`; después enciende y apaga los LED según ese estado. Puedes utilizar condiciones `if` y `else if` para decidir las transiciones.
 
-### Actividad 3.4. Incorporar los cuatro intermitentes y refactorizar el código
+### Actividad 3.4. Incorporar el estado de emergencia
 
-Amplía el programa para incorporar el funcionamiento de emergencia, en el que los dos intermitentes parpadean simultáneamente.
+Amplía el programa para incorporar un **estado de emergencia** en el que los dos intermitentes parpadeen simultáneamente.
 
-Para ello, modifica el sistema de selección de modos y reorganiza el código.
+Ten en cuenta las siguientes condiciones:
 
-1. Incorpora un nuevo modo de funcionamiento:
-   - `0`: ningún intermitente activado.
-   - `1`: intermitente izquierdo.
-   - `2`: intermitente derecho.
-   - `3`: emergencia (ambos intermitentes).
-2. Utiliza el pulsador disponible para activar el modo de emergencia, si el circuito dispone de él.
-3. Cuando esté activado el modo de emergencia, los dos LED deberán encenderse y apagarse simultáneamente.
-4. Refactoriza el código para trasladar la gestión del parpadeo a un único método llamado `Blink`.
-5. El método no devolverá ningún valor (`void`).
-6. Recibirá dos parámetros:
-   - `led` (`byte`): pin del LED que se desea controlar.
-   - `enabled` (`bool`): indica si el intermitente debe estar activo.
-7. Desde `loop()` se llamará al método correspondiente para cada LED, de acuerdo con el modo de funcionamiento seleccionado.
-8. El funcionamiento final deberá permitir cambiar entre los cuatro modos sin necesidad de reiniciar el programa.
+1. Añade una nueva constante: `ESTADO_EMERGENCIA` (`3`), que identificará el estado de emergencia.
+2. Al pulsar **ambos botones simultáneamente**, el sistema entrará en estado de emergencia, desde cualquiera de los otros estados.
+3. Si el estado de emergencia ya está activado, al volver a pulsar ambos botones se desactivará y el sistema regresará a `ESTADO_TODO_APAGADO`.
+4. Durante la emergencia, ambos LED deberán encenderse y apagarse **a la vez**, con el intervalo establecido por `BLINK_MS`.
+5. Al pulsar únicamente el botón izquierdo o derecho, se seleccionará el estado de ese intermitente, aplicando la misma regla de activación y desactivación de la actividad 3.3.
+6. El programa deberá gestionar los cuatro estados y permitir cambiar entre ellos sin reiniciar el sistema.
+7. Conserva la organización en dos fases: comprobación de pulsadores y actualización de `estado`; después, control de los LED según ese estado.
 
-La declaración del método tendrá esta estructura:
-
-```cpp
-void Blink(byte led, bool enabled)
-{
-  // Código para controlar el parpadeo del LED
-}
-```
-
-**TIP:** Utiliza variables para almacenar el estado y el instante del último cambio de cada LED. Puedes utilizar `millis()` para controlar los intervalos sin detener la ejecución del programa mediante `delay()`.
+**TIP:** Comprueba primero si están pulsados **ambos botones** y utiliza `else if` para que, en ese caso, no se atiendan también las condiciones de los botones por separado. Recuerda que el estado de emergencia implica encender y apagar los dos LED simultáneamente.
 
 ## Entrega
 
