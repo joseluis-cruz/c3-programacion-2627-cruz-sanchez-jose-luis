@@ -21,7 +21,7 @@ public class Producto
     }
     public void EstablecerMargen(double porcentaje) // Calcula y actualiza PrecioVenta aplicando el incremento porcentual indicado sobre el valor actual de PrecioCoste.
     {
-        PrecioVenta = PrecioCoste*1+(porcentaje/100);
+        PrecioVenta = PrecioCoste * (1 + (porcentaje / 100));
     }
     
 }
