@@ -17,6 +17,7 @@ public class CuentaBancaria
     public double Retirar(double cantidad)
     {
         Saldo -= cantidad;
+        return Saldo;
     }
 
 }
