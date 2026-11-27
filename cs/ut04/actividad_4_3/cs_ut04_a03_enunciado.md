@@ -8,7 +8,7 @@ El objetivo de esta actividad es modificar esas implementaciones para incorporar
 
 Realiza esta actividad en el directorio `src/cs/ut04/actividad_4_3` de tu repositorio, donde encontrarás este enunciado y los archivos fuente de partida.
 
-Duplica los archivos `Producto2.cs`, `CuentaBancaria2.cs`, `Equipo2.cs`, `Jugador2.cs` y `Libro2.cs`, sustituyendo el número `2` por el número `3` tanto en el nombre del archivo como en el de la clase pública que contiene. Adapta también las referencias entre las nuevas clases cuando sea necesario.
+Duplica los archivos `Vector2D2.cs`, `Producto2.cs`, `CuentaBancaria2.cs`, `Equipo2.cs`, `Jugador2.cs` y `Libro2.cs`, sustituyendo el número `2` por el número `3` tanto en el nombre del archivo como en el de la clase pública que contiene. Adapta también las referencias entre las nuevas clases cuando sea necesario.
 
 Conserva los archivos originales sin modificaciones.
 
@@ -24,6 +24,13 @@ Realiza las modificaciones en el orden indicado, partiendo de las propiedades y 
 Deberás deducir qué transformación corresponde a cada propiedad a partir de las especificaciones siguientes. Cuando se intente asignar un valor no permitido, lanza una excepción sin modificar el valor anterior.
 
 Adapta los métodos existentes para que respeten las nuevas restricciones, utilizando las propiedades en lugar de acceder directamente a los atributos privados cuando sea necesario. Conserva su funcionalidad, salvo en los casos en los que se indique expresamente una modificación.
+
+### Vector2D3
+
+| Propiedad | Especificación |
+|---|---|
+| `X` | Uso libre y público. |
+| `Y` | Uso libre y público. |
 
 ### Producto3
 
