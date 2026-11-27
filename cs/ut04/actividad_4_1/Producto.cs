@@ -1,4 +1,4 @@
-namespace actividad_2_5;
+namespace actividad_4_1;
 
 public class Producto
 {

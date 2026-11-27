@@ -1,4 +1,4 @@
-namespace actividad_4_2;
+namespace actividad_4_3;
 public class CuentaBancaria2
 {
     private string _titular; // nombre del titular de la cuenta
